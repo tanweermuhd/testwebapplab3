@@ -20,4 +20,23 @@ die ("Error connection: ".sqlsrv_errors());
 }
 echo "DB conneted!";
 
+$tsql = "select * FROM [dbo].[restaurant]";
+$getResults= sqlsrv_query($conn, $tsql);
+if ($getResults == FALSE)
+{
+ die (sqlsrv_errors());
+}
+while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
+{
+ echo "<tr>";
+ echo "<tr>". $row['restaurant_id'] . "</td>";
+ echo "<tr>". $row['restaurant_name'] . "</td>";
+ echo "<tr>". $row['restaurant_address'] . "</td>";
+ echo "<tr>". $row['restaurant_phone'] . "</td>";
+ echo "<tr>";
+}
+
+sqlsrv_free_stmt($getResults);
+
+
 ?>
