@@ -26,7 +26,7 @@ if ($getResults == FALSE)
 {
  die (sqlsrv_errors());
 }
-echo "<table border ='1'>";
+echo "<table border='1'>";
 
 while ($row = sqlsrv_fetch_array($getResults, SQLSRV_FETCH_ASSOC))
 {
