@@ -15,4 +15,5 @@ if(!$conn)
 die ("Error connection: ".sqlsrv_errors());
 }
 echo "DB conneted!";
-}
+
+?>
