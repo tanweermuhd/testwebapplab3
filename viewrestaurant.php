@@ -1,7 +1,7 @@
 <?php
 $serverName= "testdbtp045897.database.windows.nett";
 
-$connectionOptions = array {
+$connectionOptions = array (
 "Database" => "testdbtp045897",
 "Uid" => "apuadmin",
 "PWD" => "Apu123456");
